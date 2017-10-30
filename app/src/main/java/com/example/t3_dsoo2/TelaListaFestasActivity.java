@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class TelaListaFestasActivity extends AppCompatActivity {
     ListView listView;
-    ArrayList<Eventos> eventos = new ArrayList<>();
+    ArrayList<Evento> eventos = new ArrayList<>();
 
 
     @Override
@@ -24,19 +24,8 @@ public class TelaListaFestasActivity extends AppCompatActivity {
         // Get ListView object from xml
         listView = findViewById(R.id.list);
 
-        // ArrayList de Eventos
+        // ArrayList de Evento
         preencherArrayFestas();
-
-        // Defined Array values to show in ListView
-        String[] values = new String[] { "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View"
-        };
 
         // Define a new Adapter
         // First parameter - Context
@@ -44,7 +33,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
         // Third parameter - ID of the TextView to which the data is written
         // Forth - the Array of data
 
-        final ArrayAdapter<Eventos> adapter = new ArrayAdapter<>(this,
+        final ArrayAdapter<Evento> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, eventos);
 
 
@@ -57,14 +46,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                // ListView Clicked item value
-                //String  itemValue    = (String) listView.getItemAtPosition(position);
-
-                // Show Alert
-//                Toast.makeText(getApplicationContext(),
-//                        "Position :"+position+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
-//                        .show();
-
+                // Intent para abrir nova activity com as informações do item clickado.
                 Intent intent = new Intent(getApplicationContext(), TelaDetalhesFestasActivity.class);
 
                 intent.putExtra("nome", adapter.getItem(position).getNome());
@@ -82,7 +64,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
     }
 
     public void preencherArrayFestas(){
-        Eventos ccxp = new Eventos("Comic Con Experience",
+        Evento ccxp = new Evento("Comic Con Experience",
                 "Comic Con Experience é um evento brasileiro de cultura pop " +
                         "nos moldes da San Diego Comic-Con cobrindo as principais áreas dessa indústria " +
                         "como: jogos, quadrinhos, filmes e TV.",
@@ -92,7 +74,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "São Paulo Expo Exhibition & Convention Center - Rodovia dos Imigrantes, Km 1,5.",
                 "Livre");
 
-        Eventos rockinrio = new Eventos("Rock in Rio VII",
+        Evento rockinrio = new Evento("Rock in Rio VII",
                 "Rock in Rio é um festival de música idealizado pelo empresário brasileiro Roberto Medina pela primeira vez em 1985, sendo, " +
                         "desde sua criação, reconhecidamente, o maior festival musical do planeta.",
                 "15 a 24 Set. 2017",
@@ -101,7 +83,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "Parque Olímpico da Barra - Av. Embaixador Abelardo Bueno, 3401, Barra da Tijuca",
                 "16+");
 
-        Eventos lolworldsfinal = new Eventos("League of Legends Worlds Finals",
+        Evento lolworldsfinal = new Evento("League of Legends Worlds Finals",
                 "Campeonato Mundial de League of Legends é um campeonato internacional anual de esporte eletrônico voltado para o game League of Legends, " +
                         "organizado pela empresa americana Riot Games.",
                 "4 Nov. 2017",
@@ -110,9 +92,18 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "Estádio Nacional de Pequim - 1 National Stadium S Rd, Chaoyang Qu, China, 100101",
                 "Livre");
 
+        Evento uefaclfinal = new Evento("UEFA Champions League Finals",
+                "A Final da Liga dos Campeões da UEFA de 2016–17 foi a 62ª edição da decisão da principal competição de clubes da Europa.",
+                "3 Jun. 2017",
+                "20:45h",
+                "$",
+                "Millennium Stadium, Westgate Street, Cardiff, UK",
+                "Livre");
+
         eventos.add(ccxp);
         eventos.add(rockinrio);
         eventos.add(lolworldsfinal);
+        eventos.add(uefaclfinal);
     }
 
 

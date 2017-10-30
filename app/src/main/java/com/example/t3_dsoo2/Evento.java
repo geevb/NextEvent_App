@@ -4,7 +4,7 @@ package com.example.t3_dsoo2;
  * Created by geevb on 30/10/17.
  */
 
-public class Eventos {
+public class Evento {
 
     private String nome;
     private String descricao;
@@ -14,8 +14,8 @@ public class Eventos {
     private String endereco;
     private String faixaEtaria;
 
-    public Eventos(String nome, String descricao, String data, String horario,
-                   String valor, String endereco, String faixaEtaria){
+    public Evento(String nome, String descricao, String data, String horario,
+                  String valor, String endereco, String faixaEtaria){
         this.nome = nome;
         this.descricao = descricao;
         this.data = data;
