@@ -13,9 +13,10 @@ public class Evento {
     private String valor;
     private String endereco;
     private String faixaEtaria;
+    private String videoId;
 
     public Evento(String nome, String descricao, String data, String horario,
-                  String valor, String endereco, String faixaEtaria){
+                  String valor, String endereco, String faixaEtaria, String videoId){
         this.nome = nome;
         this.descricao = descricao;
         this.data = data;
@@ -23,6 +24,7 @@ public class Evento {
         this.valor = valor;
         this.endereco = endereco;
         this.faixaEtaria = faixaEtaria;
+        this.videoId = videoId;
     }
 
     @Override
@@ -57,5 +59,7 @@ public class Evento {
     public String getHorario(){
         return horario;
     }
+
+    public String getVideoId() { return videoId; }
 
 }

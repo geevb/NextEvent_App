@@ -56,6 +56,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 intent.putExtra("valor", adapter.getItem(position).getValor());
                 intent.putExtra("endereco", adapter.getItem(position).getEndereco());
                 intent.putExtra("faixaEtaria", adapter.getItem(position).getFaixaEtaria());
+                intent.putExtra("videoId", adapter.getItem(position).getVideoId());
                 startActivity(intent);
 
             }
@@ -72,7 +73,8 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "11h ~ 21h",
                 "R$150,00/dia",
                 "São Paulo Expo Exhibition & Convention Center - Rodovia dos Imigrantes, Km 1,5.",
-                "Livre");
+                "Livre",
+                "1mKrW1zcuko");
 
         Evento rockinrio = new Evento("Rock in Rio VII",
                 "Rock in Rio é um festival de música idealizado pelo empresário brasileiro Roberto Medina pela primeira vez em 1985, sendo, " +
@@ -80,8 +82,9 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "15 a 24 Set. 2017",
                 "12h ~ 02h",
                 "R$250,00",
-                "Parque Olímpico da Barra - Av. Embaixador Abelardo Bueno, 3401, Barra da Tijuca",
-                "16+");
+                "Parque Olímpico da Barra - Av. Embaixador Abelardo Bueno, 3401, Barra da Tijuca, Rio de Janeiro - RJ, 22775-039",
+                "16+",
+                "KcST0bT14XU");
 
         Evento lolworldsfinal = new Evento("League of Legends Worlds Finals",
                 "Campeonato Mundial de League of Legends é um campeonato internacional anual de esporte eletrônico voltado para o game League of Legends, " +
@@ -90,7 +93,8 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "15:30h ~ 21h",
                 "R$200,00",
                 "Estádio Nacional de Pequim - 1 National Stadium S Rd, Chaoyang Qu, China, 100101",
-                "Livre");
+                "Livre",
+                "67ZeMZhbQbQ");
 
         Evento uefaclfinal = new Evento("UEFA Champions League Finals",
                 "A Final da Liga dos Campeões da UEFA de 2016–17 foi a 62ª edição da decisão da principal competição de clubes da Europa.",
@@ -98,7 +102,10 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "20:45h",
                 "$",
                 "Millennium Stadium, Westgate Street, Cardiff, UK",
-                "Livre");
+                "Livre",
+                "fz2bEoyksn8");
+
+
 
         eventos.add(ccxp);
         eventos.add(rockinrio);
