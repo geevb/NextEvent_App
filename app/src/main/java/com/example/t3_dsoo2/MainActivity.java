@@ -14,8 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirTelaFestas(View view){
-        Intent intent = new Intent(MainActivity.this, TelaListaFestasActivity.class);
-        intent.putExtra("key", "yay");
-        MainActivity.this.startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), TelaListaFestasActivity.class);
+        startActivity(intent);
     }
 }

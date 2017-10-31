@@ -20,41 +20,39 @@ public class TelaDetalhesFestasActivity extends AppCompatActivity {
         String data = getIntent().getExtras().getString("data");
         String horario = getIntent().getExtras().getString("horario");
         String valor = getIntent().getExtras().getString("valor");
-        String endereco = getIntent().getExtras().getString("endereco");
         String faixaEtaria = getIntent().getExtras().getString("faixaEtaria");
-        String videoId = getIntent().getExtras().getString("videoId");
 
-        // Nome
+        // Nome do Evento
         TextView textViewNome = findViewById(R.id.textViewNome);
         textViewNome.setText(nome);
 
+        // Data do Evento
         TextView textViewVlData = findViewById(R.id.textViewVlData);
         textViewVlData.setText(data);
 
+        // Horário do Evento
         TextView textViewVlHorario = findViewById(R.id.textViewVlHorario);
         textViewVlHorario.setText(horario);
 
+        // Valor do Evento
         TextView textViewVlValor = findViewById(R.id.textViewVlValor);
         textViewVlValor.setText(valor);
 
+        // Descrição do Evento
         TextView textViewVlDescricao = findViewById(R.id.textViewVlDescricao);
         textViewVlDescricao.setText(descricao);
 
+        // Faixa Etária do Evento
         TextView textViewFaixaEtaria = findViewById(R.id.textViewVlFaixaEtaria);
         textViewFaixaEtaria.setText(faixaEtaria);
 
-//        TextView textViewEndereco = findViewById(R.id.textViewEndereco);
-//        textViewNome.setText(nome);
-//
 
 
     }
 
     public void abrirTelaGoogleMaps(View view) {
         String endereco = "http://maps.google.co.in/maps?q=" + getIntent().getExtras().getString("endereco");;
-        //Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(endereco));
-        //intent.putExtra("key", "yay");
         startActivity(intent);
     }
 
