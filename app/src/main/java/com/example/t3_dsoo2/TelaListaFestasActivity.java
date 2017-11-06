@@ -27,20 +27,19 @@ public class TelaListaFestasActivity extends AppCompatActivity {
         // ArrayList de Evento
         preencherArrayFestas();
 
-        // Define a new Adapter
-        // First parameter - Context
-        // Second parameter - Layout for the row
-        // Third parameter - ID of the TextView to which the data is written
-        // Forth - the Array of data
-
+        // Criar novo Adapter
+        // Primeiro parametro = Contexto
+        // Segundo parametro - Layout
+        // Terceiro parametro - ID of the TextView to which the data is written
+        // Quarto parametro - O Array com informacoes
         final ArrayAdapter<Evento> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, eventos);
 
 
-        // Assign adapter to ListView
+        // Vincular o Adapter a ListView.
         listView.setAdapter(adapter);
 
-        // ListView Item Click Listener
+        // Setar os itens da lista como clickáveis
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
@@ -64,7 +63,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
         });
     }
 
-    public void preencherArrayFestas(){
+    public void preencherArrayFestas() {
         Evento ccxp = new Evento("Comic Con Experience",
                 "Comic Con Experience é um evento brasileiro de cultura pop " +
                         "nos moldes da San Diego Comic-Con cobrindo as principais áreas dessa indústria " +
@@ -100,7 +99,7 @@ public class TelaListaFestasActivity extends AppCompatActivity {
                 "A Final da Liga dos Campeões da UEFA de 2016–17 foi a 62ª edição da decisão da principal competição de clubes da Europa.",
                 "3 Jun. 2017",
                 "20:45h",
-                "$",
+                "$300,00",
                 "Millennium Stadium, Westgate Street, Cardiff, UK",
                 "Livre",
                 "fz2bEoyksn8");
@@ -114,5 +113,5 @@ public class TelaListaFestasActivity extends AppCompatActivity {
     }
 
 
-    }
+}
 
